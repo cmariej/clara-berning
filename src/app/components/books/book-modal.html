@@ -8,19 +8,28 @@
 
     <div class="cover-column">
       <img [src]="book.image" [alt]="book.title">
-      <a
-          class="btn-gold"
-          href="https://www.thalia.de/"
-          target="_blank"
-        >
-          {{ 'BOOKS.BUY_NOW' | translate }}
-        </a>
+      <p *ngIf="!book.thalia">{{ 'BOOKS.RELEASE_DATE' | translate }}: TBA</p>
+      <p *ngIf="book.thalia">{{ 'BOOKS.RELEASE_DATE' | translate }}: {{ book.releasedate }}</p>
+      <a *ngIf="book.thalia"
+        class="btn-gold"
+        href="{{book.thalia}}"
+        target="_blank"
+      >
+        {{ 'BOOKS.THALIA' | translate }}
+      </a>
+      <a *ngIf="book.amazon"
+        class="btn-gold"
+        href="{{book.amazon}}"
+        target="_blank"
+      >
+        {{ 'BOOKS.AMAZON' | translate }}
+      </a>
     </div>
 
     <div class="book-infos">
         <h2>{{ book.title }}</h2>
 
-        <h3>{{ book.subtitle }}</h3>
+        <h3 *ngIf="book.subtitle">{{ book.subtitle }}</h3>
 
         <p>{{ book.blurb }}</p>
 

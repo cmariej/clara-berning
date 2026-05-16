@@ -30,8 +30,9 @@
   "BOOKS": {
     "TITLE": "My Books",
     "SUB_TITLE": "Magical worlds. Great emotions. Unforgettable love.",
-    "MORE": "Learn more",
-    "BUY_NOW": "Buy now"
+    "RELEASE_DATE": "Publication Date",
+    "THALIA": "Thalia",
+    "AMAZON": "Amazon"
   },
 
   "CONTACT": {

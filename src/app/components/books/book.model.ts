@@ -11,4 +11,8 @@ export interface Book {
   image: string;
   description: Translation;
   blurb: string;
+  releasedate?: string;
+  amazon?: string;
+  thalia?: string;
+
 }
