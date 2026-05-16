@@ -1,0 +1,32 @@
+<div class="modal-overlay" (click)="closeModal()">
+
+  <div class="modal-content" (click)="$event.stopPropagation()">
+
+    <button class="close-button" (click)="closeModal()">
+      ×
+    </button>
+
+    <div class="cover-column">
+      <img [src]="book.image" [alt]="book.title">
+      <a
+          class="btn-gold"
+          href="https://www.thalia.de/"
+          target="_blank"
+        >
+          {{ 'BOOKS.BUY_NOW' | translate }}
+        </a>
+    </div>
+
+    <div class="book-infos">
+        <h2>{{ book.title }}</h2>
+
+        <h3>{{ book.subtitle }}</h3>
+
+        <p>{{ book.blurb }}</p>
+
+        
+    </div>
+
+  </div>
+
+</div>

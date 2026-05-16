@@ -1,0 +1,115 @@
+.about-wrapper {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+/* LEFT TREE */
+
+.about-decoration {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        height: 100%;
+    }
+}
+
+.about-title {
+  display: inline-flex;
+
+  align-items: baseline;
+
+  flex-wrap: nowrap;
+
+  white-space: nowrap;
+
+  gap: 1rem;
+
+  font-family: 'Cormorant Garamond', serif;
+
+  font-size: clamp(3rem, 5vw, 4rem);
+
+  font-weight: 400;
+
+  line-height: 1.1;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 1.5rem;
+}
+
+/* CLARA */
+
+.about-title span, .outro-text {
+  font-family: 'Parisienne', cursive;
+  font-size: 3rem;
+  line-height: 0.88;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: none;
+  margin: 0;
+  background: linear-gradient(
+    to right bottom,
+    #f6d59a 0%,
+    #d6a85f 42%,
+    #9f6a2b 72%,
+    #f3d7a0 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter: drop-shadow(0 0 10px rgba(214,168,95,.15));
+}
+
+.about-title span {
+  padding-top: 0.15em;
+  font-size: 5rem;
+}
+
+.about-image img {
+  width: 500px;
+}
+
+.about-content p {
+  line-height: 2;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  font-size: 1.2;
+}
+
+.small-title {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.outro-text {
+font-family: 'Parisienne', cursive;
+
+  font-size: 3rem;
+
+  font-weight: 400;
+
+  color: #c68b3d;
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 12px rgba(198,139,61,.18),
+    0 0 24px rgba(198,139,61,.08);
+
+  transform: translateY(5px);
+}
+
+.about-wrapper > * {
+  position: relative;
+  z-index: 2;
+}

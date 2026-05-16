@@ -1,0 +1,64 @@
+<div class="books-container">
+
+  <div class="brand-subtitle">
+          <span class="line"></span>
+          <span class="star">✦</span>
+          <h2>{{ 'BOOKS.TITLE' | translate }}</h2>
+          <span class="star">✦</span>
+          <span class="line"></span>
+    </div>
+
+    <h3>{{ 'BOOKS.SUB_TITLE' | translate }}</h3>
+
+  <div class="books-wrapper">
+
+    <button
+      class="nav-btn left"
+      (click)="prevPage()"
+      [disabled]="currentPage === 0"
+    >
+      ❮
+    </button>
+
+    <div class="books-viewport">
+
+      <div
+        class="books-slider"
+        [style.transform]="'translateX(-' + currentOffset + 'px)'"
+      >
+
+        <div
+          class="book-card"
+          *ngFor="let book of books"
+          (click)="openBook(book)"
+        >
+
+          <img [src]="book.image" [alt]="book.title">
+
+          <h3>✦ {{ book.genre }} ✦</h3>
+
+          <p>{{ book.description[currentLang] }}</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <button
+      class="nav-btn right"
+      (click)="nextPage()"
+      [disabled]="currentPage === maxPage"
+    >
+      ❯
+    </button>
+
+  </div>
+
+  <app-book-modal
+    *ngIf="selectedBook"
+    [book]="selectedBook"
+    (close)="closeModal()"
+  ></app-book-modal>
+
+</div>

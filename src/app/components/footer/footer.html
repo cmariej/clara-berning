@@ -1,0 +1,35 @@
+<!-- footer.component.html -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="logo-section">
+      <img src="/assets/images/logo1-transparent.png" alt="Clara Berning Books Logo" />
+    </div>
+
+    <div class="center-section">
+      <nav class="nav-links">
+        <a href="#">{{ 'NAV.HOME' | translate }}</a>
+        <a href="#about">{{ 'NAV.ABOUT' | translate }}</a>
+        <a href="#books">{{ 'NAV.BOOKS' | translate }}</a>
+        <a href="#contect">{{ 'NAV.CONTACT' | translate }}</a>
+        <a routerLink="/impressum">{{ 'FOOTER.IMPRINT' | translate }}</a>
+        <a routerLink="/datenschutz">{{ 'FOOTER.PRIVACY' | translate }}</a>
+      </nav>
+
+      <div class="copyright">
+        {{ 'FOOTER.COPYRIGHT' | translate }}
+      </div>
+    </div>
+
+    <div class="social-section">
+      <a href="#" aria-label="Instagram">
+        <i class="bi bi-instagram"></i>
+      </a>
+
+      <a href="mailto:info@example.com" aria-label="E-Mail">
+        <i class="bi bi-envelope"></i>
+      </a>
+    </div>
+
+  </div>
+</footer>

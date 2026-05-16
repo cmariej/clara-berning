@@ -1,0 +1,87 @@
+{
+  "APP": {
+    "TITLE": "Willkommen",
+    "DESCRIPTION": "Das ist eine Angular Übersetzungsdemo"
+  },
+  "NAV": {
+    "HOME": "Startseite",
+    "ABOUT": "Über mich",
+    "BOOKS": "Bücher",
+    "CONTACT": "Kontakt"
+  },
+
+  "HERO": {
+    "SUBTITLE": "Fantasy & Romance",
+    "TEXT": "Geschichten, die berühren.\nLiebe, die bleibt.",
+    "INFO_TEXT": "Magische Welten. Große Gefühle.\nGefährliche Abenteuer. Tiefe Liebe.\nBücher, die dein Herz höherschlagen lassen.",
+    "BUTTON": "Entdecke meine Bücher"
+  },
+
+  "ABOUT": {
+    "SMALL": "Über mich",
+    "TITLE": "Hallo, ich bin",
+    "TEXT1": "Ich schreibe Fantasy & Romance Bücher für alle, die sich nach magischen Welten, starken Charakteren und tiefen Emotionen sehnen.",
+    "TEXT2": "Ob verbotene Liebe oder Schicksalsverbindungen, knisternde Spannung oder zarte Herzmomente – in meinen Geschichten treffen Herzklopfen und Magie aufeinander.",
+    "TEXT3": "Meine Bücher sind zum Träumen, Mitfiebern und Verlieben.\nFür alle die Romane fühlen und Fantasy leben.",
+    "OUTRO": "Schön, dass du hier bist!",
+    "BUTTON": "Mehr über mich"
+  },
+
+  "BOOKS": {
+    "TITLE": "Meine Bücher",
+    "SUB_TITLE": "Magische Welten. Große Gefühle. Unvergessliche Liebe.",
+    "MORE": "Mehr erfahren",
+    "BUY_NOW": "Jetzt kaufen"
+  },
+
+  "CONTACT": {
+    "SMALL": "Kontakt",
+    "TITLE": "Ich freue mich, von dir zu hören!",
+    "TEXT": "Du hast Fragen, möchtest mit mir zusammenarbeiten oder mir einfach eine Nachricht schreiben? Ich lese jede Nachricht persönlich und antworte so schnell ich kann.",
+    "EMAIL": "E-Mail",
+    "INSTAGRAM": "Instagram"
+  },
+
+  "FOOTER": {
+    "COPYRIGHT": "© 2026 Clara Berning Books | Alle Rechte vorbehalten",
+    "IMPRINT": "Impressum",
+    "PRIVACY": "Datenschutz"
+  },
+
+  "LEGAL": {
+    "BACK": "← Zurück"
+  },
+
+  "IMPRINT": {
+    "TITLE": "Impressum",
+    "COMPANY_TITLE": "Angaben gemäß § 5 TMG",
+    "CONTACT_TITLE": "Kontakt",
+    "RESPONSIBLE_TITLE": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+    "LIABILITY_TITLE": "Haftung für Inhalte",
+    "LIABILITY_TEXT": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+  },
+
+  "PRIVACY": {
+    "TITLE": "Datenschutzerklärung",
+
+    "OVERVIEW_TITLE": "1. Datenschutz auf einen Blick",
+    "OVERVIEW_TEXT": "Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Personenbezogene Daten werden vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften behandelt.",
+
+    "RESPONSIBLE_TITLE": "2. Verantwortliche Stelle",
+
+    "HOSTING_TITLE": "3. Hosting und Server-Logfiles",
+    "HOSTING_TEXT": "Beim Besuch dieser Website werden automatisch Informationen durch den Hostinganbieter erfasst und in sogenannten Server-Logfiles gespeichert.",
+
+    "CONTACT_TITLE": "4. Kontaktaufnahme",
+    "CONTACT_TEXT": "Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der daraus hervorgehenden Kontaktdaten zur Bearbeitung Ihrer Anfrage gespeichert.",
+
+    "SOCIAL_TITLE": "5. Externe Links und Social Media",
+    "SOCIAL_TEXT": "Diese Website enthält Links zu externen sozialen Netzwerken wie Instagram.",
+
+    "RIGHTS_TITLE": "6. Ihre Rechte",
+    "RIGHTS_TEXT": "Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten.",
+
+    "CHANGES_TITLE": "7. Änderungen",
+    "CHANGES_TEXT": "Wir behalten uns vor, diese Datenschutzerklärung anzupassen."
+  }
+}

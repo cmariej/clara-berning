@@ -1,0 +1,108 @@
+/* impressum.component.scss */
+
+.legal-page {
+  min-height: 100vh;
+  background: #050505;
+  color: #d4b06a;
+  padding: 120px 20px 80px;
+  font-family: 'Georgia', serif;
+}
+
+.legal-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 52px;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+  color: #d4b06a;
+  font-weight: 400;
+}
+
+.legal-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 176, 106, 0.15);
+  border-radius: 18px;
+  padding: 32px;
+  margin-bottom: 28px;
+  backdrop-filter: blur(6px);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(212, 176, 106, 0.35);
+    transform: translateY(-2px);
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 18px;
+    color: #e6c27a;
+    font-weight: 500;
+  }
+
+  p {
+    line-height: 1.8;
+    font-size: 17px;
+    color: #d7c29a;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .legal-page {
+    padding-top: 90px;
+  }
+
+  h1 {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+
+  .legal-card {
+    padding: 24px;
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position:absolute;
+  left: 5%;
+
+  background: transparent;
+  border: 1px solid rgba(212, 176, 106, 0.25);
+  color: #d4b06a;
+
+  padding: 12px 22px;
+  border-radius: 14px;
+
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  margin-bottom: 40px;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(212, 176, 106, 0.08);
+    border-color: rgba(212, 176, 106, 0.5);
+
+    transform: translateX(-3px);
+  }
+}
