@@ -1,0 +1,138 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  position: relative;
+  background: #1e1e1e;
+
+  width: 100%;
+  max-width: calc(100vw - 10rem);
+
+  max-height: 90vh; // wichtig
+  overflow-y: auto; // wichtig
+
+  border-radius: 16px;
+
+  animation: fadeIn 0.2s ease;
+
+  display: flex;
+  flex-direction: row;
+
+  padding: 3rem;
+  gap: 1rem;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c89b53 transparent;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #c89b53;
+  border-radius: 20px;
+}
+
+.modal-content img {
+  padding: 3rem 3rem 1rem 3rem;;
+  width: 30rem;
+  max-height: fit-content;
+  object-fit: cover;
+}
+
+.modal-content .book-infos h2 {
+  padding: 3rem 3rem 1rem 3rem;;
+  font-family: "Cinzel", serif;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 8px;
+  font-variant: small-caps;
+  white-space: nowrap;
+  background: linear-gradient(to bottom, #fff6e6 0%, #f0c980 40%, #c68b3d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.modal-content .book-infos h3 {
+  padding: 0rem 3rem 3rem 3rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  background: linear-gradient(to bottom, #f0c980 40%, #c68b3d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal-content p {
+  padding: 0 3rem 6rem 3rem;
+  line-height: 1.9;
+  white-space: pre-line;
+  font-size: 1.3rem;
+}
+
+.cover-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 2rem;
+}
+
+.btn-gold {
+  margin: 24px 24px 12px;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+
+  .modal-overlay {
+    padding: 1rem;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .modal-content {
+    flex-direction: column;
+
+    max-width: 100%;
+    max-height: unset;
+
+    padding: 1.5rem;
+  }
+
+  .modal-content img {
+    width: 100%;
+  }
+}

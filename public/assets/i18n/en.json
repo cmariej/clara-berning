@@ -1,0 +1,87 @@
+{
+  "APP": {
+    "TITLE": "Welcome",
+    "DESCRIPTION": "This is an Angular translation demo"
+  },
+  "NAV": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "BOOKS": "Books",
+    "CONTACT": "Contact"
+  },
+
+  "HERO": {
+    "SUBTITLE": "Fantasy & Romance",
+    "TEXT": "Stories that touch your heart.\nLove that lingers.",
+    "INFO_TEXT": "Magical worlds. Deep emotions.\nDangerous adventures. Intense romance.\nBooks that make your heart race.",
+    "BUTTON": "Discover my books"
+  },
+
+  "ABOUT": {
+    "SMALL": "About me",
+    "TITLE": "Hello, I'm",
+    "TEXT1": "I write fantasy and romance books for readers who long for magical worlds, unforgettable characters and deep emotions.",
+    "TEXT2": "Whether forbidden love or soul-bound destinies, slow-burning tension or emotional heartbeats — my stories blend magic and romance together.",
+    "TEXT3": "My books are made for dreaming, feeling deeply, and falling in love.\nFor everyone who feels romance and lives fantasy.",
+    "OUTRO": "I'm so glad you're here!",
+    "BUTTON": "More about me"
+  },
+
+  "BOOKS": {
+    "TITLE": "My Books",
+    "SUB_TITLE": "Magical worlds. Great emotions. Unforgettable love.",
+    "MORE": "Learn more",
+    "BUY_NOW": "Buy now"
+  },
+
+  "CONTACT": {
+    "SMALL": "Contact",
+    "TITLE": "I'd love to hear from you!",
+    "TEXT": "Do you have questions, collaboration requests or simply want to send a message? I personally read every message and answer as quickly as possible.",
+    "EMAIL": "E-Mail",
+    "INSTAGRAM": "Instagram"
+  },
+
+  "FOOTER": {
+    "COPYRIGHT": "© 2026 Clara Berning Books | All rights reserved",
+    "IMPRINT": "Imprint",
+    "PRIVACY": "Privacy Policy"
+  },
+
+  "LEGAL": {
+    "BACK": "← Back"
+  },
+
+  "IMPRINT": {
+    "TITLE": "Legal Notice",
+    "COMPANY_TITLE": "Information according to § 5 TMG",
+    "CONTACT_TITLE": "Contact",
+    "RESPONSIBLE_TITLE": "Responsible for content according to § 55 Abs. 2 RStV",
+    "LIABILITY_TITLE": "Liability for Content",
+    "LIABILITY_TEXT": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+  },
+
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+
+    "OVERVIEW_TITLE": "1. Data Protection at a Glance",
+    "OVERVIEW_TEXT": "The protection of your personal data is very important to us. Personal data is treated confidentially and in accordance with legal data protection regulations.",
+
+    "RESPONSIBLE_TITLE": "2. Responsible Entity",
+
+    "HOSTING_TITLE": "3. Hosting and Server Log Files",
+    "HOSTING_TEXT": "When visiting this website, information is automatically collected by the hosting provider and stored in server log files.",
+
+    "CONTACT_TITLE": "4. Contact",
+    "CONTACT_TEXT": "If you contact us by email, your information including contact details will be stored for processing your request.",
+
+    "SOCIAL_TITLE": "5. External Links and Social Media",
+    "SOCIAL_TEXT": "This website contains links to external social networks such as Instagram.",
+
+    "RIGHTS_TITLE": "6. Your Rights",
+    "RIGHTS_TEXT": "You have the right to obtain information about your stored personal data at any time.",
+
+    "CHANGES_TITLE": "7. Changes",
+    "CHANGES_TEXT": "We reserve the right to adapt this privacy policy."
+  }
+}

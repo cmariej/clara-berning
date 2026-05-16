@@ -1,0 +1,77 @@
+.contact-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bg-image {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  background: url("/assets/images/letter.png");
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.25),
+      rgba(0,0,0,.55)
+    );
+
+  z-index: 1;
+}
+
+.brand-subtitle {
+  margin-bottom: 1.8rem;
+    
+   h2 {
+    font-size: 2rem;
+    }
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+}
+
+.contact-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin: 0 5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-wrapper h3 {
+  margin: 1rem 0 2rem;
+  font-size: 2.2rem;
+  font-variant: small-caps;
+}
+
+.contact-wrapper p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.9;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
