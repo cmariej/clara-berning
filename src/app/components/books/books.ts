@@ -5,6 +5,7 @@ import { Book, Translation } from './book.model';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-books',
@@ -28,11 +29,49 @@ export class BooksComponent implements OnInit  {
   constructor(private translate: TranslateService, private http: HttpClient) {}
 
   ngOnInit(): void {
+
     this.http
-      .get<Book[]>('assets/data/books.json')
+      .get<Book[]>(
+        `${environment.apiUrl}/projects/Schreiben/buecher`
+      )
+
       .subscribe(data => {
-        this.books = data;
-      });
+
+        this.books = data.map(book => {
+
+          let image = ''
+
+          // Kein Bild hinterlegt
+          if (!book.image) {
+
+            image =
+              `${environment.imageUrl}/uploads/books/cover-not-available.png`
+          }
+
+          // Bereits vollständige URL
+          else if (
+            book.image.startsWith('http')
+          ) {
+
+            image = book.image
+          }
+
+          // Relativer Upload-Pfad
+          else {
+
+            image =
+              `${environment.imageUrl}${book.image}`
+          }
+
+          console.log(image)
+
+          return {
+            ...book,
+            image
+          }
+        })
+
+      })
   }
 
   get currentOffset(): number {
