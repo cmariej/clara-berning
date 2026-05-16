@@ -6,6 +6,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-books',
@@ -13,7 +14,8 @@ import { environment } from '../../../environments/environment';
   imports: [
     CommonModule,
     BookModalComponent,
-    TranslateModule
+    TranslateModule,
+    MatProgressSpinnerModule
   ],
   templateUrl: './books.html',
   styleUrl: './books.scss'
@@ -25,53 +27,63 @@ export class BooksComponent implements OnInit  {
   currentPage = 0;
   visibleBooks = 3;
   cardWidth = 460;
+  loading = false;
 
   constructor(private translate: TranslateService, private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.loading = true;
 
     this.http
       .get<Book[]>(
         `${environment.apiUrl}/projects/Schreiben/buecher`
       )
+      .subscribe({
 
-      .subscribe(data => {
+        next: data => {
 
-        this.books = data.map(book => {
+            this.loading = false;
 
-          let image = ''
+          this.books = data.map(book => {
 
-          // Kein Bild hinterlegt
-          if (!book.image) {
+            let image = '';
 
-            image =
-              `${environment.imageUrl}/uploads/books/cover-not-available.png`
-          }
+            // Kein Bild hinterlegt
+            if (!book.image) {
 
-          // Bereits vollständige URL
-          else if (
-            book.image.startsWith('http')
-          ) {
+              image =
+                `${environment.imageUrl}/uploads/books/cover-not-available.png`;
+            }
 
-            image = book.image
-          }
+            // Bereits vollständige URL
+            else if (
+              book.image.startsWith('http')
+            ) {
 
-          // Relativer Upload-Pfad
-          else {
+              image = book.image;
+            }
 
-            image =
-              `${environment.imageUrl}${book.image}`
-          }
+            // Relativer Upload-Pfad
+            else {
 
-          console.log(image)
+              image =
+                `${environment.imageUrl}${book.image}`;
+            }
 
-          return {
-            ...book,
-            image
-          }
-        })
+            return {
+              ...book,
+              image
+            };
+          });
+        },
 
-      })
+        error: err => {
+
+          console.error(err);
+
+          this.loading = false;
+        }
+      });
   }
 
   get currentOffset(): number {

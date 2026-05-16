@@ -66,7 +66,7 @@
   padding: 0rem 3rem 3rem 3rem;
   font-size: 1.6rem;
   text-transform: uppercase;
-  background: linear-gradient(to bottom, #f0c980 40%, #c68b3d 100%);
+  background: linear-gradient(to bottom, #ebe0cc 00%, #c68b3d 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -76,12 +76,12 @@
   line-height: 1.9;
   white-space: pre-line;
   font-size: 1.3rem;
+  color: #ebe0cc;
 }
 
 .cover-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center; 
   gap: 2rem;
 

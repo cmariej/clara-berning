@@ -46,8 +46,8 @@ h1 {
 
   p {
     line-height: 1.8;
-    font-size: 17px;
-    color: #d7c29a;
+    font-size: 1.5rem;
+    color: #ebe0cc;
   }
 }
 
@@ -77,32 +77,3 @@ h1 {
   }
 }
 
-.back-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  position:absolute;
-  left: 5%;
-
-  background: transparent;
-  border: 1px solid rgba(212, 176, 106, 0.25);
-  color: #d4b06a;
-
-  padding: 12px 22px;
-  border-radius: 14px;
-
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-
-  margin-bottom: 40px;
-
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: rgba(212, 176, 106, 0.08);
-    border-color: rgba(212, 176, 106, 0.5);
-
-    transform: translateX(-3px);
-  }
-}

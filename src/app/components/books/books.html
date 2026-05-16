@@ -10,7 +10,10 @@
 
     <h3>{{ 'BOOKS.SUB_TITLE' | translate }}</h3>
 
-  <div class="books-wrapper">
+  <div *ngIf="loading" class="spinner-container">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  <div *ngIf="!loading" class="books-wrapper">
 
     <button
       class="nav-btn left"

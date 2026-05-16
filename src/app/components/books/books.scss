@@ -14,6 +14,19 @@ $gap: 5rem;
   }
 }
 
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 300px;
+}
+
+::ng-deep .mat-mdc-progress-spinner circle {
+  stroke: #526455 !important;
+}
+
 .books-wrapper {
   position: relative;
   display: flex;

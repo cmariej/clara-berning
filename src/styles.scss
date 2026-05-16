@@ -1,20 +1,26 @@
+@use '@angular/material' as mat;
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&family=Parisienne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decoration:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+html {
+  scroll-behavior: smooth;
+
+   @include mat.theme((
+    color: mat.$azure-palette,
+    density: 0
+  ));
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Cinzel Decorative', serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1.6px;
   line-height: 1.4;
-  text-transform: none;
-}
-
-html {
-  scroll-behavior: smooth;
+  text-transform: none !important;
 }
 
 body {
@@ -43,6 +49,7 @@ p {
   text-shadow: 0 0 10px rgba(198,139,61,.12);
   letter-spacing: 1.6px;
   line-height: 1.4;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .container {
@@ -147,6 +154,37 @@ p {
 
 .btn-gold:active {
   transform: translateY(0);
+}
+
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position:absolute;
+  left: 5%;
+
+  background: transparent;
+  border: 1px solid rgba(212, 176, 106, 0.25);
+  color: #d4b06a;
+
+  padding: 12px 22px;
+  border-radius: 14px;
+
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+
+  margin-bottom: 40px;
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(212, 176, 106, 0.08);
+    border-color: rgba(212, 176, 106, 0.5);
+
+    transform: translateX(-3px);
+  }
 }
 
 .brand-subtitle {
