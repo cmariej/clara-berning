@@ -16,22 +16,24 @@ export class AppComponent {
 
   constructor(private translate: TranslateService, private router: Router) {
 
-    this.translate.setDefaultLang('de');
-
-    this.translate.use('de');
-
     this.router.events
-      .pipe(
-        filter(event => event instanceof NavigationEnd)
-      )
-      .subscribe(() => {
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
 
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
+        // Fragment-Links (#about etc.) erlauben
+        if (event.urlAfterRedirects.includes('#')) {
+          return;
+        }
+
+        requestAnimationFrame(() => {
+          window.scrollTo(0, 0);
         });
 
       });
+
+    this.translate.setDefaultLang('de');
+
+    this.translate.use('de');
   }
 
   switchLanguage(language: string) {

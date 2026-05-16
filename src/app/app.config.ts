@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { Router, NavigationEnd, provideRouter, withInMemoryScrolling } from '@angular/router';
+import { Router, NavigationEnd, provideRouter, withInMemoryScrolling, RouterModule } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 
 import { routes } from './app.routes';
@@ -10,8 +10,8 @@ import { filter } from 'rxjs';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(
-      routes
-    ),
+    routes
+  ),
 
     provideHttpClient(),
 
