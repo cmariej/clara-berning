@@ -36,7 +36,7 @@ export class BooksComponent implements OnInit  {
 
     this.http
       .get<Book[]>(
-        `${environment.apiUrl}/projects/Schreiben/buecher`
+        `${environment.apiUrl}/projects/writing/books`
       )
       .subscribe({
 
