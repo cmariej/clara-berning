@@ -25,8 +25,8 @@ jobs:
         run: npm install
 
       - name: Angular build
-        run: npm run build -- --base-href "/clara-berning/"
-        #run: npm run build -- --base-href "/"
+        #run: npm run build -- --base-href "/clara-berning/"
+        run: npm run build -- --base-href "/"
 
       - name: Assets prüfen
         run: find ./dist -name "*.png" | wc -l
@@ -39,4 +39,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/clara-berning/browser
-          #cname: www.clara-berning.de
+          cname: www.clara-berning.de
