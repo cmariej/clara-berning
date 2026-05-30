@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://data-management-5f93.onrender.com/api',
-  imageUrl: 'https://data-management-5f93.onrender.com'
+  apiUrl: 'https://warehouse.jung-privat.de/api',
+  imageUrl: 'https://warehouse.jung-privat.de'
 }
