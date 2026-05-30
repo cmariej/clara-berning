@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/home/home.scss"],
+  "sourcesContent": ["section {\n  position: relative;\n}\n\nsection::after {\n  content: '';\n\n  position: absolute;\n\n  left: 0;\n  bottom: 0;\n\n  width: 100%;\n  height: 1px;\n\n  background: #d6a85f;\n\n  opacity: 0.5;\n\n  box-shadow:\n    0 0 6px rgba(214,168,95,.25);\n}"],
+  "mappings": ";AAAA;AACE,YAAA;;AAGF,OAAA;AACE,WAAA;AAEA,YAAA;AAEA,QAAA;AACA,UAAA;AAEA,SAAA;AACA,UAAA;AAEA,cAAA;AAEA,WAAA;AAEA,cACE,EAAA,EAAA,IAAA,KAAA,GAAA,EAAA,GAAA,EAAA,EAAA,EAAA;;",
+  "names": []
+}
