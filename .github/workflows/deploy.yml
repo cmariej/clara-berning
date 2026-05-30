@@ -26,7 +26,7 @@ jobs:
 
       - name: Angular build
         #run: npm run build -- --base-href "/clara-berning/"
-        run: npm run build -- --base-href "/"
+        run: npm run build -- --base-href "/" --configuration production
 
       - name: Assets prüfen
         run: find ./dist -name "*.png" | wc -l
