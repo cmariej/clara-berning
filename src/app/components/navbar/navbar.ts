@@ -16,4 +16,10 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.scss']
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  menuOpen = false;
+
+  closeMenu(): void {
+  this.menuOpen = false;
+}
+}

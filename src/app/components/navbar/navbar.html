@@ -4,16 +4,73 @@
 
     <div class="nav-left">
 
-      <nav>
-      <a href="#hero" class="active">{{ 'NAV.HOME' | translate }}</a>
-      <a href="#about">{{ 'NAV.ABOUT' | translate }}</a>
-      <a href="#books">{{ 'NAV.BOOKS' | translate }}</a>
-      <a href="#contact">{{ 'NAV.CONTACT' | translate }}</a>
-    </nav>
+      <button
+        class="mobile-toggle"
+        (click)="menuOpen = !menuOpen"
+        aria-label="Toggle navigation"
+      >
+        ☰
+      </button>
+
+      <nav [class.open]="menuOpen">
+
+        <a
+          href="#hero"
+          class="active"
+          (click)="closeMenu()"
+        >
+          {{ 'NAV.HOME' | translate }}
+        </a>
+
+        <a
+          href="#about"
+          (click)="closeMenu()"
+        >
+          {{ 'NAV.ABOUT' | translate }}
+        </a>
+
+        <a
+          href="#books"
+          (click)="closeMenu()"
+        >
+          {{ 'NAV.BOOKS' | translate }}
+        </a>
+
+        <a
+          href="#contact"
+          (click)="closeMenu()"
+        >
+          {{ 'NAV.CONTACT' | translate }}
+        </a>
+
+        <!-- MOBILE SOCIALS -->
+
+        <div class="mobile-socials">
+
+          <a
+            href="mailto:info@clara-berning.de"
+            aria-label="E-Mail"
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+
+          <a
+            href="https://discord.gg/jGKSrvEA"
+            target="_blank"
+            aria-label="Discord"
+          >
+            <i class="fa-brands fa-discord"></i>
+          </a>
+
+        </div>
+
+      </nav>
 
     </div>
 
     <div class="nav-right">
+
+      <!-- DESKTOP SOCIALS -->
 
       <div class="socials">
 
