@@ -40,7 +40,7 @@
     "TITLE": "Ich freue mich, von dir zu hören!",
     "TEXT": "Du hast Fragen, möchtest mit mir zusammenarbeiten oder mir einfach eine Nachricht schreiben? Ich lese jede Nachricht persönlich und antworte so schnell ich kann.",
     "EMAIL": "E-Mail",
-    "INSTAGRAM": "Instagram"
+    "DISCORD": "Discord"
   },
 
   "FOOTER": {
@@ -77,7 +77,7 @@
     "CONTACT_TEXT": "Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der daraus hervorgehenden Kontaktdaten zur Bearbeitung Ihrer Anfrage gespeichert.",
 
     "SOCIAL_TITLE": "5. Externe Links und Social Media",
-    "SOCIAL_TEXT": "Diese Website enthält Links zu externen sozialen Netzwerken wie Instagram.",
+    "SOCIAL_TEXT": "Diese Website enthält Links zu externen sozialen Netzwerken wie Discord.",
 
     "RIGHTS_TITLE": "6. Ihre Rechte",
     "RIGHTS_TEXT": "Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten.",
