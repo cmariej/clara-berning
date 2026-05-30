@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/language-switcher/language-switcher.scss"],
-  "sourcesContent": [".language-switcher {\n  display: flex;\n  gap: .5rem;\n}\n\n.language-switcher button {\n  background: transparent;\n  border: 1px solid #d6a85f;\n  color: #d6a85f;\n  padding: 6px 12px;\n  cursor: pointer;\n  transition: .3s;\n}\n\n.language-switcher button.active,\n.language-switcher button:hover {\n  background: #d6a85f;\n  color: #070707;\n}"],
-  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,OAAA;;AAGF,CALA,kBAKA;AACE,cAAA;AACA,UAAA,IAAA,MAAA;AACA,SAAA;AACA,WAAA,IAAA;AACA,UAAA;AACA,cAAA;;AAGF,CAdA,kBAcA,MAAA,CAAA;AAAA,CAdA,kBAcA,MAAA;AAEE,cAAA;AACA,SAAA;;",
-  "names": []
-}
