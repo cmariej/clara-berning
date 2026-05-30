@@ -1,9 +1,13 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectorRef
+} from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 import { BookModalComponent } from './book-modal';
-import { Book, Translation } from './book.model';
+import { Book } from './book.model';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -20,7 +24,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   templateUrl: './books.html',
   styleUrl: './books.scss'
 })
-export class BooksComponent implements OnInit  {
+export class BooksComponent implements OnInit {
 
   books: Book[] = [];
   selectedBook: Book | null = null;
@@ -29,10 +33,16 @@ export class BooksComponent implements OnInit  {
   cardWidth = 460;
   loading = false;
 
-  constructor(private translate: TranslateService, private http: HttpClient) {}
+  constructor(
+    private translate: TranslateService,
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
+
     this.loading = true;
+    this.cdr.detectChanges();
 
     this.http
       .get<Book[]>(
@@ -41,8 +51,6 @@ export class BooksComponent implements OnInit  {
       .subscribe({
 
         next: data => {
-
-            this.loading = false;
 
           this.books = data.map(book => {
 
@@ -56,9 +64,7 @@ export class BooksComponent implements OnInit  {
             }
 
             // Bereits vollständige URL
-            else if (
-              book.image.startsWith('http')
-            ) {
+            else if (book.image.startsWith('http')) {
 
               image = book.image;
             }
@@ -75,6 +81,10 @@ export class BooksComponent implements OnInit  {
               image
             };
           });
+
+          this.loading = false;
+
+          this.cdr.detectChanges();
         },
 
         error: err => {
@@ -82,6 +92,8 @@ export class BooksComponent implements OnInit  {
           console.error(err);
 
           this.loading = false;
+
+          this.cdr.detectChanges();
         }
       });
   }

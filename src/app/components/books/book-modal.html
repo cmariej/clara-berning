@@ -8,8 +8,8 @@
 
     <div class="cover-column">
       <img [src]="book.image" [alt]="book.title">
-      <p *ngIf="!book.thalia">{{ 'BOOKS.RELEASE_DATE' | translate }}: TBA</p>
-      <p *ngIf="book.thalia">{{ 'BOOKS.RELEASE_DATE' | translate }}: {{ book.releasedate }}</p>
+      <p *ngIf="!book.releasedate">{{ 'BOOKS.RELEASE_DATE' | translate }}: TBA</p>
+      <p *ngIf="book.releasedate">{{ 'BOOKS.RELEASE_DATE' | translate }}: {{ book.releasedate }}</p>
       <a *ngIf="book.thalia"
         class="btn-gold"
         href="{{book.thalia}}"
