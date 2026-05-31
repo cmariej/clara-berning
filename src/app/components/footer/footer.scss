@@ -35,7 +35,7 @@
       color: #c89b53;
       text-decoration: none;
       font-variant: small-caps;
-      font-size: 1.4rem;
+      font-size: 0.8rem;
       letter-spacing: 1px;
       transition: opacity 0.3s ease;
 
@@ -74,7 +74,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .footer {
     padding: 30px 20px;
 
@@ -84,11 +84,26 @@
     }
 
     .nav-links {
+      padding-top: 2rem;
       gap: 18px;
+    }
+
+    .logo-section img {
+      height: 6rem;
+    }
+
+    .copyright {
+      margin: 2rem;
+      font-size: 1rem;
+
     }
 
     .social-section {
       justify-content: center;
+    }
+
+    .social-section a i {
+      font-size: 1.5rem;
     }
   }
 }

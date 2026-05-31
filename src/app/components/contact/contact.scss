@@ -75,3 +75,166 @@
   gap: 1.5rem;
   margin-top: 3rem;
 }
+
+/* =======================================================
+   TABLET
+======================================================= */
+
+@media (max-width: 1200px) {
+
+  .contact-section {
+    min-height: 600px;
+
+    padding: 5rem 0;
+  }
+
+  .contact-wrapper {
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.75)
+      );
+
+    z-index: 1;
+  }
+
+  .bg-image {
+    left: 0;
+  }
+
+  .brand-subtitle {
+
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .contact-wrapper h3 {
+    font-size: 2rem;
+
+    line-height: 1.4;
+  }
+
+  .contact-wrapper p {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+}
+
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    min-height: auto;
+
+    padding: 4rem 0;
+  }
+
+  .contact-wrapper {
+    padding: 0 1.5rem;
+  }
+
+  .brand-subtitle {
+    margin-bottom: 1.2rem;
+
+    h2 {
+      font-size: 1.2rem;
+
+      letter-spacing: 3px;
+    }
+
+    .line {
+      width: 40px;
+    }
+
+    .star {
+      font-size: 0.6rem;
+    }
+  }
+
+  .contact-wrapper h3 {
+    margin: 0.5rem 0 1.5rem;
+
+    font-size: 1.5rem;
+
+    line-height: 1.5;
+  }
+
+  .contact-wrapper p {
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+
+  .contact-buttons {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+  }
+
+  .contact-buttons .btn-gold {
+    width: 100%;
+
+    max-width: 320px;
+  }
+}
+
+/* =======================================================
+   SMALL MOBILE
+======================================================= */
+
+@media (max-width: 480px) {
+
+  .contact-section {
+    padding: 3rem 0;
+  }
+
+  .contact-wrapper {
+    padding: 0 1rem;
+    margin: 0 1rem;
+  }
+
+  .brand-subtitle {
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    .line {
+      width: 25px;
+    }
+  }
+
+  .contact-wrapper h3 {
+    font-size: 1.2rem;
+
+    line-height: 1.6;
+  }
+
+  .contact-wrapper p {
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+  }
+
+  .contact-buttons .btn-gold {
+    max-width: 100%;
+  }
+}

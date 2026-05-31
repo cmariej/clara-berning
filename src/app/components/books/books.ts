@@ -1,7 +1,8 @@
 import {
   Component,
   OnInit,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  HostListener
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -12,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+
 @Component({
   selector: 'app-books',
   standalone: true,
@@ -19,7 +21,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CommonModule,
     BookModalComponent,
     TranslateModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
   ],
   templateUrl: './books.html',
   styleUrl: './books.scss'
@@ -29,9 +31,17 @@ export class BooksComponent implements OnInit {
   books: Book[] = [];
   selectedBook: Book | null = null;
   currentPage = 0;
+
   visibleBooks = 3;
   cardWidth = 460;
+  gap = 80;
+
   loading = false;
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.updateSliderSettings();
+  }
 
   constructor(
     private translate: TranslateService,
@@ -42,6 +52,7 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
 
     this.loading = true;
+    this.updateSliderSettings();
     this.cdr.detectChanges();
 
     this.http
@@ -98,12 +109,52 @@ export class BooksComponent implements OnInit {
       });
   }
 
+  updateSliderSettings(): void {
+
+    const width = window.innerWidth;
+
+    if (width <= 480) {
+
+      this.visibleBooks = 1;
+      this.cardWidth = 180;
+      this.gap = 0;
+    }
+
+    else if (width <= 1000) {
+
+      this.visibleBooks = 1;
+      this.cardWidth = 260;
+      this.gap = 16;
+    }
+
+    // TABLET
+    else if (width <= 1600) {
+
+      this.visibleBooks = 2;
+      this.cardWidth = 320;
+      this.gap = 20;
+    }
+
+    // DESKTOP
+    else {
+
+      this.visibleBooks = 3;
+      this.cardWidth = 380;
+      this.gap = 80;
+    }
+
+    // verhindert leere Seiten nach Resize
+    if (this.currentPage > this.maxPage) {
+      this.currentPage = this.maxPage;
+    }
+  }
+
   get currentOffset(): number {
-    return this.currentPage * this.visibleBooks * this.cardWidth;
+    return this.currentPage * (this.cardWidth + this.gap);
   }
 
   get maxPage(): number {
-    return Math.ceil(this.books.length / this.visibleBooks) - 1;
+    return this.books.length - this.visibleBooks;
   }
 
   nextPage(): void {
@@ -113,7 +164,7 @@ export class BooksComponent implements OnInit {
     }
   }
 
-  prevPage(): void {
+ prevPage(): void {
 
     if (this.currentPage > 0) {
       this.currentPage--;

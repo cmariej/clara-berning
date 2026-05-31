@@ -55,8 +55,20 @@ h1 {
 
 @media (max-width: 768px) {
 
+   .legal-container {
+  
+    button {
+      position: relative;
+      font-size: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
   .legal-page {
-    padding-top: 90px;
+    padding-top: 2rem;
   }
 
   h1 {
