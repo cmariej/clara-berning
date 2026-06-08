@@ -55,11 +55,12 @@
 
   "IMPRINT": {
     "TITLE": "Legal Notice",
-    "COMPANY_TITLE": "Information according to § 5 TMG",
+    "LEGAL_INFO_TITLE": "Information according to Section 5 DDG",
+    "PSEUDONYM": "Author pseudonym",
+    "RESPONSIBLE": "Responsible person",
     "CONTACT_TITLE": "Contact",
-    "RESPONSIBLE_TITLE": "Responsible for content according to § 55 Abs. 2 RStV",
     "LIABILITY_TITLE": "Liability for Content",
-    "LIABILITY_TEXT": "Despite careful content control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+    "LIABILITY_TEXT": "Despite careful control of content, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
   },
 
   "PRIVACY": {
