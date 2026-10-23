@@ -38,9 +38,9 @@
   "CONTACT": {
     "SMALL": "Contact",
     "TITLE": "I'd love to hear from you!",
-    "TEXT": "Do you have questions, collaboration requests or simply want to send a message? I personally read every message and answer as quickly as possible.",
+    "TEXT": "Do you have a question, something to share, or want to talk about my books and ideas? I would love to hear from you!",
     "EMAIL": "E-Mail",
-    "DISCORD": "DISCORD"
+    "INSTAGRAM": "INSTAGRAM"
   },
 
   "FOOTER": {
@@ -78,7 +78,7 @@
     "CONTACT_TEXT": "If you contact us by email, your information including contact details will be stored for processing your request.",
 
     "SOCIAL_TITLE": "5. External Links and Social Media",
-    "SOCIAL_TEXT": "This website contains links to external social networks such as Discord.",
+    "SOCIAL_TEXT": "This website contains links to external social networks such as Instagram.",
 
     "RIGHTS_TITLE": "6. Your Rights",
     "RIGHTS_TEXT": "You have the right to obtain information about your stored personal data at any time.",
