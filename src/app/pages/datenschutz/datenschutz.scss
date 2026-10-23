@@ -2,8 +2,8 @@
 
 .legal-page {
   min-height: 100vh;
-  background: #050505;
-  color: #d4b06a;
+  background: #fffaf2;
+  color: #493b3b;
   padding: 120px 20px 80px;
   font-family: 'Georgia', serif;
 }
@@ -18,13 +18,13 @@ h1 {
   font-size: 52px;
   margin-bottom: 60px;
   letter-spacing: 2px;
-  color: #d4b06a;
+  color: #9f641e;
   font-weight: 400;
 }
 
 .legal-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(212, 176, 106, 0.15);
+  background: #fffdf9;
+  border: 1px solid rgba(184, 121, 36, 0.18);
   border-radius: 18px;
   padding: 32px;
   margin-bottom: 28px;
@@ -33,21 +33,21 @@ h1 {
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: rgba(212, 176, 106, 0.35);
+    border-color: rgba(184, 121, 36, 0.4);
     transform: translateY(-2px);
   }
 
   h2 {
     font-size: 24px;
     margin-bottom: 18px;
-    color: #e6c27a;
+    color: #9f641e;
     font-weight: 500;
   }
 
   p {
     line-height: 1.8;
     font-size: 1.5rem;
-    color: #ebe0cc;
+    color: #493b3b;
   }
 }
 

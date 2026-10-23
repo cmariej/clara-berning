@@ -10,7 +10,7 @@ app-hero {
 
   min-height: 100%;
 
-  background: #050505;
+  background: #fbf2e7;
 
   overflow: hidden;
 
@@ -41,8 +41,8 @@ app-hero {
   background-image:
     linear-gradient(
       to left,
-      rgba(5,5,5,0.08),
-      rgba(5,5,5,0.92)
+      rgba(255,250,242,0.12),
+      rgba(255,250,242,0.91)
     ),
     url('/assets/images/hero-bg.png');
 
@@ -73,8 +73,8 @@ app-hero {
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.25),
-      rgba(0,0,0,.55)
+      rgba(255,250,242,.12),
+      rgba(255,250,242,.24)
     );
 
   z-index: 1;
@@ -147,17 +147,17 @@ app-hero {
 
   background: linear-gradient(
     to right bottom,
-    #f6d59a 15%,
-    #d6a85f 42%,
-    #9f6a2b 72%,
-    #f3d7a0 100%
+    #d6a34f 15%,
+    #b87924 42%,
+    #875317 72%,
+    #c58a35 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   filter:
-    drop-shadow(0 0 10px rgba(214,168,95,.15));
+    drop-shadow(0 2px 8px rgba(113, 72, 29, 0.12));
 }
 
 /* BOOKS ROW */
@@ -188,9 +188,9 @@ app-hero {
 
   background: linear-gradient(
     to right bottom,
-    #d6a85f 10%,
-    #9f6a2b 72%,
-    #f3d7a0 100%
+    #c58a35 10%,
+    #89571e 72%,
+    #d5a34f 100%
   );
 
   -webkit-background-clip: text;
@@ -204,9 +204,9 @@ app-hero {
   background: linear-gradient(
     to right,
     transparent,
-    #d6a85f,
-    #f7deb2,
-    #d6a85f,
+    #d5a34f,
+    #f4dba9,
+    #d5a34f,
     transparent
   );
 }
@@ -214,10 +214,10 @@ app-hero {
 .brand-subtitle .star {
   font-size: 0.75rem;
 
-  color: #d6a85f;
+  color: #b87924;
 
   text-shadow:
-    0 0 8px rgba(214,168,95,.45);
+    0 2px 8px rgba(184, 121, 36, 0.2);
 }
 
 /* SUBTITLE */
@@ -237,9 +237,9 @@ app-hero {
 
   background: linear-gradient(
     to right bottom,
-    #d6a85f 10%,
-    #9f6a2b 72%,
-    #f3d7a0 100%
+    #c58a35 10%,
+    #89571e 72%,
+    #d5a34f 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -277,7 +277,7 @@ app-hero {
 
   letter-spacing: 2px;
 
-  color: #f3e5c8;
+  color: #493b3b;
 
   width: fit-content;
 
@@ -301,16 +301,11 @@ app-hero {
     1rem
     2.8rem;
 
-  border: 1px solid rgba(214,168,95,.7);
+  border: 1px solid rgba(184, 121, 36, 0.7);
 
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(20,20,20,.9),
-      rgba(5,5,5,.95)
-    );
+  background: linear-gradient(135deg, #fffdf8, #f7e8ce);
 
-  color: #d6a85f;
+  color: #80501b;
 
   text-decoration: none;
 
@@ -334,7 +329,7 @@ app-hero {
 
   inset: 3px;
 
-  border: 1px solid rgba(214,168,95,.15);
+  border: 1px solid rgba(184, 121, 36, 0.2);
 }
 
 .btn-gold::after {
@@ -342,18 +337,17 @@ app-hero {
 
   font-size: .8rem;
 
-  color: #d6a85f;
+  color: #b87924;
 }
 
 .btn-gold:hover {
   transform: translateY(-2px);
 
-  color: #fff1d2;
+  color: #613b13;
 
-  border-color: #f3d7a0;
+  border-color: #c58c39;
 
-  box-shadow:
-    0 0 20px rgba(214,168,95,.15);
+  box-shadow: 0 12px 28px rgba(105, 68, 38, 0.16);
 }
 
 /* DIVIDER */

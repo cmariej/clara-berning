@@ -2,11 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
+:root {
+  --color-ivory: #fffaf2;
+  --color-cream: #f8efe3;
+  --color-rose: #f4e3e2;
+  --color-rose-deep: #a85e66;
+  --color-ink: #493b3b;
+  --color-muted: #786766;
+  --color-amber: #b87924;
+  --color-amber-light: #d5a34f;
+  --color-amber-soft: rgba(184, 121, 36, 0.18);
+}
+
 html {
   scroll-behavior: smooth;
 
-   @include mat.theme((
-    color: mat.$azure-palette,
+  @include mat.theme((
+    color: mat.$orange-palette,
     density: 0
   ));
 }
@@ -23,10 +35,10 @@ html {
 }
 
 body {
-  background: #070707;
-  color: #e7d3ae;
+  background: var(--color-ivory);
+  color: var(--color-ink);
   font-family: 'Cormorant Garamond', serif;
-  user-select: none;
+  user-select: text;
 }
 
 img {
@@ -43,12 +55,12 @@ h4 {
 
 p {
   font-size: 1.6rem;
-  line-height: 1.15;
   font-weight: 300;
+  color: var(--color-ink);
   text-shadow: 0 0 10px rgba(198,139,61,.12);
   letter-spacing: 1.6px;
   line-height: 1.4;
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .container {
@@ -57,7 +69,7 @@ p {
 }
 
 .gold {
-  color: #d6a85f;
+  color: var(--color-amber);
 }
 
 .section {
@@ -75,30 +87,23 @@ p {
   margin-bottom: 3rem;
   max-width: fit-content;
 
-  border: 1px solid rgba(214,168,95,.7);
+  border: 1px solid var(--color-amber);
   background:
-    linear-gradient(
-      to bottom,
-      rgba(20,20,20,.9),
-      rgba(5,5,5,.95)
-    );
+    linear-gradient(135deg, #fffdf8, #f7e8ce);
 
-  color: #d6a85f;
+  color: #80501b;
   text-decoration: none;
   font-family: 'Cinzel', serif;
   font-size: 1.4rem;
   font-weight: 500;
   letter-spacing: 1px;
-  text-transform: uppercase;
 
   cursor: pointer;
 
   overflow: hidden;
   transition:
     all 0.35s ease;
-  box-shadow:
-    0 0 0 rgba(214,168,95,0),
-    inset 0 0 0 rgba(255,255,255,0);
+  box-shadow: 0 8px 22px rgba(105, 68, 38, 0.1);
 }
 
 /* INNER GLOW BORDER */
@@ -107,7 +112,7 @@ p {
   content: '';
   position: absolute;
   inset: 3px;
-  border: 1px solid rgba(214,168,95,.15);
+  border: 1px solid rgba(184, 121, 36, 0.2);
   pointer-events: none;
 }
 
@@ -116,29 +121,20 @@ p {
 .btn-gold::after {
   content: '✦';
   font-size: 0.8rem;
-  color: #d6a85f;
+  color: var(--color-amber);
   margin-left: 0.4rem;
-  text-shadow: 0 0 10px rgba(214,168,95,.45);
+  text-shadow: 0 2px 8px rgba(184, 121, 36, 0.2);
 }
 
 /* HOVER */
 
 .btn-gold:hover {
   transform: translateY(-2px);
-  color: #f7deb2;
-  border-color: #f3d7a0;
+  color: #613b13;
+  border-color: #c58c39;
 
-  box-shadow:
-    0 0 20px rgba(214,168,95,.15),
-    0 0 40px rgba(214,168,95,.08),
-    inset 0 0 12px rgba(255,255,255,.03);
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(30,20,8,.95),
-      rgba(10,10,10,1)
-    );
+  box-shadow: 0 12px 28px rgba(105, 68, 38, 0.16);
+  background: linear-gradient(135deg, #fffefa, #f2dfbd);
 }
 
 /* HOVER STAR */
@@ -146,7 +142,7 @@ p {
 .btn-gold:hover::after {
   transform: scale(1.15);
 
-  color: #fff1d2;
+  color: #80501b;
 }
 
 /* ACTIVE */
@@ -164,8 +160,8 @@ p {
   left: 5%;
 
   background: transparent;
-  border: 1px solid rgba(212, 176, 106, 0.25);
-  color: #d4b06a;
+  border: 1px solid var(--color-amber-soft);
+  color: var(--color-amber);
 
   padding: 12px 22px;
   border-radius: 14px;
@@ -179,8 +175,8 @@ p {
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(212, 176, 106, 0.08);
-    border-color: rgba(212, 176, 106, 0.5);
+    background: rgba(184, 121, 36, 0.08);
+    border-color: var(--color-amber);
 
     transform: translateX(-3px);
   }
@@ -224,9 +220,9 @@ p {
 
   background: linear-gradient(
     to bottom,
-    #fff6e6 0%,
-    #f0c980 40%,
-    #c68b3d 100%
+    #cc9844 0%,
+    #a9681e 55%,
+    #80501b 100%
   );
 
   -webkit-background-clip: text;
@@ -242,9 +238,9 @@ p {
   background: linear-gradient(
     to right,
     transparent,
-    #d6a85f,
-    #f7deb2,
-    #d6a85f,
+    #d5a34f,
+    #f4dba9,
+    #d5a34f,
     transparent
   );
 
@@ -256,12 +252,12 @@ p {
 .brand-subtitle .star {
   font-size: 0.75rem;
 
-  color: #d6a85f;
+  color: var(--color-amber);
 
   transform: translateY(-1px);
 
   text-shadow:
-    0 0 8px rgba(214,168,95,.45);
+    0 2px 8px rgba(184, 121, 36, 0.2);
 }
 
 .hero-subtitle {
@@ -282,10 +278,7 @@ p {
 
   white-space: pre-line;
 
-  color: #f3e5c8;
-
-  text-shadow:
-    0 0 10px rgba(255,255,255,.05);
+  color: var(--color-ink);
 }
 
 @media (max-width: 1200px) {

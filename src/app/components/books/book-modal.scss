@@ -6,7 +6,7 @@
   position: fixed;
   inset: 0;
 
-  background: rgba(0,0,0,0.82);
+  background: rgba(73, 59, 59, 0.42);
 
   display: flex;
   justify-content: center;
@@ -44,20 +44,16 @@
 
   border-radius: 20px;
 
-  background:
-    linear-gradient(
-      to bottom,
-      #1d1b18,
-      #111
-    );
+  background: linear-gradient(145deg, #fffdf9, #f7eee3);
+  border: 1px solid rgba(184, 121, 36, 0.18);
 
   box-shadow:
-    0 20px 60px rgba(0,0,0,.45);
+    0 24px 70px rgba(73, 59, 59, 0.24);
 
   animation: fadeIn 0.25s ease;
 
   scrollbar-width: thin;
-  scrollbar-color: #c89b53 transparent;
+  scrollbar-color: #b87924 transparent;
 }
 
 .modal-content::-webkit-scrollbar {
@@ -65,7 +61,7 @@
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-  background: #c89b53;
+  background: #b87924;
   border-radius: 20px;
 }
 
@@ -86,7 +82,7 @@
 }
 
 .cover-column img {
-  width: 100%;
+  width: 75%;
 
   border-radius: 12px;
 
@@ -104,7 +100,7 @@
 
   letter-spacing: 1px;
 
-  color: #ebe0cc;
+  color: #786766;
 }
 
 /* =======================================================
@@ -132,7 +128,7 @@
 }
 
 .book-infos h2 {
-  font-family: "Cinzel", serif;
+  font-family: 'Cinzel', serif;
 
   font-size: clamp(2.2rem, 4vw, 3.5rem);
 
@@ -149,9 +145,9 @@
   background:
     linear-gradient(
       to bottom,
-      #fff6e6 0%,
-      #f0c980 40%,
-      #c68b3d 100%
+      #cc9844 0%,
+      #b87924 45%,
+      #80501b 100%
     );
 
   -webkit-background-clip: text;
@@ -170,8 +166,8 @@
   background:
     linear-gradient(
       to bottom,
-      #ebe0cc 0%,
-      #c68b3d 70%
+      #786766 0%,
+      #9f641e 70%
     );
 
   -webkit-background-clip: text;
@@ -185,7 +181,9 @@
 
   font-size: 1.15rem;
 
-  color: #ebe0cc;
+  color: #493b3b;
+
+  padding-bottom: 3.5rem;
 }
 
 /* =======================================================
@@ -204,9 +202,9 @@
   border: none;
   border-radius: 50%;
 
-  background: rgba(0,0,0,0.7);
+  background: #f4e7d8;
 
-  color: white;
+  color: #80501b;
 
   font-size: 1.8rem;
 
@@ -220,9 +218,9 @@
 }
 
 .close-button:hover {
-  background: #c89b53;
+  background: #b87924;
 
-  color: black;
+  color: white;
 }
 
 /* =======================================================

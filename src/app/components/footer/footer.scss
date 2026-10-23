@@ -1,10 +1,10 @@
 /* footer.component.scss */
 
 .footer {
-  background: #050505;
-  color: #c89b53;
+  background: #f2e6d8;
+  color: #80501b;
   padding: 1rem 3rem;
-  border-top: 1px solid rgba(200, 155, 83, 0.2);
+  border-top: 1px solid rgba(184, 121, 36, 0.2);
   font-family: 'Georgia', serif;
 
   .footer-container {
@@ -32,10 +32,10 @@
     margin-bottom: 14px;
 
     a {
-      color: #c89b53;
+      color: #80501b;
       text-decoration: none;
       font-variant: small-caps;
-      font-size: 0.8rem;
+      font-size: calc(0.8rem + 2px);
       letter-spacing: 1px;
       transition: opacity 0.3s ease;
 
@@ -47,7 +47,7 @@
 
   .copyright {
     font-size: 1.2rem;
-    color: #b58b4b;
+    color: #786766;
     margin-top: 2rem;
   }
 
@@ -56,7 +56,7 @@
     gap: 2rem;
 
     a {
-      color: #c89b53;
+      color: #80501b;
       transition: transform 0.3s ease, opacity 0.3s ease;
 
       i {

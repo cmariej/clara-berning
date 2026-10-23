@@ -70,8 +70,13 @@ export class BooksComponent implements OnInit {
             // Kein Bild hinterlegt
             if (!book.image) {
 
-              image =
-                `${environment.imageUrl}/uploads/books/cover-not-available.png`;
+              image = '/assets/images/cover-not-available.png';
+            }
+
+            // Warehouse placeholder cover: use the local asset instead
+            else if (book.image.toLowerCase().includes('cover-not-available')) {
+
+              image = '/assets/images/cover-not-available.png';
             }
 
             // Bereits vollständige URL

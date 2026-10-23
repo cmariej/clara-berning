@@ -59,15 +59,15 @@
   margin: 0;
   background: linear-gradient(
     to right bottom,
-    #f6d59a 0%,
-    #d6a85f 42%,
-    #9f6a2b 72%,
-    #f3d7a0 100%
+    #d6a34f 0%,
+    #b87924 42%,
+    #875317 72%,
+    #c58a35 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  filter: drop-shadow(0 0 10px rgba(214,168,95,.15));
+  filter: drop-shadow(0 2px 8px rgba(113, 72, 29, 0.12));
 }
 
 .about-title span {

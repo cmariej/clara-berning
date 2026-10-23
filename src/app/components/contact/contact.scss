@@ -1,157 +1,181 @@
 .contact-section {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: min(100vh, 760px);
+  overflow: hidden;
+  background-color: #fff9f1;
+  background-image: url('/assets/images/contact-bg.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
-  overflow: hidden;
-}
-
-.bg-image {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 50%;
-  height: 100%;
+  grid-column: 1;
   width: 100%;
-  background-repeat: no-repeat;
-
-  background: url("/assets/images/letter.png");
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.25),
-      rgba(0,0,0,.55)
-    );
-
-  z-index: 1;
-}
-
-.brand-subtitle {
-  margin-bottom: 1.8rem;
-    
-   h2 {
-    font-size: 2rem;
-    }
-}
-
-.contact-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.75);
+  padding: 4.5rem clamp(2rem, 5vw, 5.5rem);
+  background: transparent;
 }
 
 .contact-wrapper {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  margin: 0 5rem;
-  width: 50%;
+  width: min(100%, 590px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.contact-eyebrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 1.8rem;
+
+  h2 {
+    color: #8b5c35;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .line {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #b77932, #f4dba9, #b77932, transparent);
+    opacity: 0.95;
+  }
+
+  .star {
+    color: #b77932;
+    font-size: 0.75rem;
+    transform: translateY(-1px);
+  }
 }
 
 .contact-wrapper h3 {
+  position: relative;
+  max-width: 570px;
   margin: 1rem 0 2rem;
+  color: #a5682e;
+  font-family: 'Cinzel', serif;
   font-size: 2.2rem;
+  font-weight: 400;
   font-variant: small-caps;
+
 }
 
 .contact-wrapper p {
-  max-width: 700px;
-  margin: auto;
+  max-width: 500px;
+  margin: 0;
+  color: #6e584b;
+  font-size: 1.6rem;
   line-height: 1.9;
 }
 
 .contact-buttons {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.6rem;
 }
 
-/* =======================================================
-   TABLET
-======================================================= */
+.contact-button {
+  position: relative;
+  display: inline-flex;
+  min-width: 210px;
+  min-height: 58px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2.7rem;
+  border: 1px solid rgba(183, 121, 50, 0.9);
+  border-radius: 0;
+  background: rgba(255, 249, 241, 0.74);
+  box-shadow: 0 6px 18px rgba(74, 48, 37, 0.06);
+  color: #a5682e;
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+
+  &::after {
+    content: '✦';
+    position: absolute;
+    right: 1.25rem;
+    color: #b77932;
+    font-size: 0.75rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: #a96c2f;
+    background: #f6ead9;
+    box-shadow: 0 10px 24px rgba(74, 48, 37, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #a96c2f;
+    outline-offset: 3px;
+  }
+}
 
 @media (max-width: 1200px) {
-
   .contact-section {
-    min-height: 600px;
-
-    padding: 5rem 0;
+    grid-template-columns: 1fr;
+    min-height: 0;
   }
 
-  .contact-wrapper {
-    width: 100%;
+  .contact-content {
+    grid-column: 1;
+    min-height: 580px;
+    padding: 4.5rem clamp(2rem, 8vw, 5rem);
+    background: rgba(255, 249, 241, 0.2);
   }
 
-  .overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(0,0,0,.75),
-        rgba(0,0,0,.75)
-      );
-
-    z-index: 1;
-  }
-
-  .bg-image {
-    left: 0;
-  }
-
-  .brand-subtitle {
-
-    h2 {
-      font-size: 1.6rem;
-    }
+  .contact-eyebrow h2 {
+    font-size: 1.6rem;
   }
 
   .contact-wrapper h3 {
     font-size: 2rem;
-
     line-height: 1.4;
   }
 
   .contact-wrapper p {
     font-size: 1rem;
-
     line-height: 1.8;
+  }
+
+  .contact-button {
+    font-size: 1rem;
   }
 }
 
-/* =======================================================
-   MOBILE
-======================================================= */
-
 @media (max-width: 768px) {
-
-  .contact-section {
-    min-height: auto;
-
-    padding: 4rem 0;
+  .contact-content {
+    min-height: 0;
+    padding: 4.5rem 1.5rem 3.5rem;
+    background: rgba(255, 249, 241, 0.76);
   }
 
-  .contact-wrapper {
-    padding: 0 1.5rem;
-  }
-
-  .brand-subtitle {
-    margin-bottom: 1.2rem;
+  .contact-eyebrow {
+    gap: 0.55rem;
+    margin-bottom: 1.3rem;
 
     h2 {
       font-size: 1.2rem;
-
       letter-spacing: 3px;
     }
 
@@ -165,76 +189,58 @@
   }
 
   .contact-wrapper h3 {
-    margin: 0.5rem 0 1.5rem;
-
     font-size: 1.5rem;
-
     line-height: 1.5;
   }
 
   .contact-wrapper p {
     font-size: 0.95rem;
-
     line-height: 1.8;
   }
 
   .contact-buttons {
     width: 100%;
-
-    flex-direction: column;
-    align-items: center;
-
-    gap: 1rem;
-
-    margin-top: 2rem;
+    gap: 0.75rem;
+    margin-top: 1.6rem;
   }
 
-  .contact-buttons .btn-gold {
-    width: 100%;
-
-    max-width: 320px;
+  .contact-button {
+    flex: 1 1 135px;
+    min-width: 0;
+    padding-inline: 1rem;
   }
 }
 
-/* =======================================================
-   SMALL MOBILE
-======================================================= */
-
 @media (max-width: 480px) {
-
   .contact-section {
     padding: 3rem 0;
   }
 
-  .contact-wrapper {
-    padding: 0 1rem;
-    margin: 0 1rem;
+  .contact-content {
+    padding: 4.5rem 1rem 3.5rem;
   }
 
-  .brand-subtitle {
+  .contact-eyebrow h2 {
+    font-size: 1rem;
+  }
 
-    h2 {
-      font-size: 1rem;
-    }
-
-    .line {
-      width: 25px;
-    }
+  .contact-eyebrow .line {
+    width: 25px;
   }
 
   .contact-wrapper h3 {
     font-size: 1.2rem;
-
     line-height: 1.6;
   }
 
   .contact-wrapper p {
     font-size: 0.9rem;
-
     line-height: 1.7;
   }
+}
 
-  .contact-buttons .btn-gold {
-    max-width: 100%;
+@media (prefers-reduced-motion: reduce) {
+  .contact-button {
+    transition: none;
   }
 }

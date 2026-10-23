@@ -103,6 +103,12 @@ $small-mobile-card-width: 220px;
 
   cursor: pointer;
 
+  padding: 0.85rem 0.85rem 1.4rem;
+  border: 1px solid rgba(184, 121, 36, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 253, 249, 0.94);
+  box-shadow: 0 14px 34px rgba(73, 59, 59, 0.08);
+
   transition:
     transform 0.25s ease,
     opacity 0.25s ease;
@@ -114,7 +120,7 @@ $small-mobile-card-width: 220px;
 
 .book-card img {
   width: 100%;
-  height: 600px;
+  height: 570px;
 
   object-fit: cover;
 
@@ -128,7 +134,7 @@ $small-mobile-card-width: 220px;
 
   font-size: 1.6rem;
 
-  color: #d6a85f;
+  color: #9f641e;
 }
 
 .book-card p {
@@ -154,11 +160,11 @@ $small-mobile-card-width: 220px;
 
   border-radius: 50%;
 
-  border: 1px solid #d6a85f;
+  border: 1px solid #b87924;
 
-  background: rgba(0,0,0,0.75);
+  background: #fffaf2;
 
-  color: #d6a85f;
+  color: #9f641e;
 
   font-size: 2rem;
 
@@ -173,9 +179,9 @@ $small-mobile-card-width: 220px;
 }
 
 .nav-btn:hover:not(:disabled) {
-  background: #d6a85f;
+  background: #b87924;
 
-  color: black;
+  color: #fffaf2;
 }
 
 .nav-btn:disabled {

@@ -1,5 +1,18 @@
 section {
   position: relative;
+  scroll-margin-top: 1rem;
+}
+
+#hero {
+  background: #fbf2e7;
+}
+
+#about {
+  background: #fffaf3;
+}
+
+#books {
+  background: #f8efe7;
 }
 
 section::after {
@@ -13,10 +26,10 @@ section::after {
   width: 100%;
   height: 1px;
 
-  background: #d6a85f;
+  background: linear-gradient(90deg, transparent, #c58a35, transparent);
 
   opacity: 0.5;
 
   box-shadow:
-    0 0 6px rgba(214,168,95,.25);
+    0 0 8px rgba(184, 121, 36, 0.18);
 }

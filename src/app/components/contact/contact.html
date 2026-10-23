@@ -1,40 +1,31 @@
-<div class="contact-section section">
-  <div class="overlay"></div>
-  <div class="bg-image"></div>
+<section class="contact-section" aria-labelledby="contact-title">
+  <div class="contact-content">
+    <div class="contact-wrapper">
+      <div class="contact-eyebrow">
+        <span class="line"></span>
+        <span class="star" aria-hidden="true">✦</span>
+        <h2>{{ 'CONTACT.SMALL' | translate }}</h2>
+        <span class="star" aria-hidden="true">✦</span>
+        <span class="line"></span>
+      </div>
 
-  <div class="container contact-wrapper">
+      <h3 id="contact-title">{{ 'CONTACT.TITLE' | translate }}</h3>
 
-    <div class="brand-subtitle">
-          <span class="line"></span>
-          <span class="star">✦</span>
-          <h2>{{ 'CONTACT.SMALL' | translate }}</h2>
-          <span class="star">✦</span>
-          <span class="line"></span>
+      <p>{{ 'CONTACT.TEXT' | translate }}</p>
+
+      <div class="contact-buttons">
+        <a href="mailto:info@clara-berning.de" class="contact-button">
+          {{ 'CONTACT.EMAIL' | translate }}
+        </a>
+        <a
+          href="https://www.instagram.com/clara.berning/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-button"
+        >
+          {{ 'CONTACT.INSTAGRAM' | translate }}
+        </a>
+      </div>
     </div>
-
-    <h3>{{ 'CONTACT.TITLE' | translate }}</h3>
-
-    <p>
-      {{ 'CONTACT.TEXT' | translate }}
-    </p>
-
-    <div class="contact-buttons">
-
-      <a
-        href="mailto:info@clara-berning.de"
-        class="btn-gold">
-        E-Mail
-      </a>
-
-      <a
-        href="https://discord.gg/jGKSrvEA"
-        target="_blank"
-        class="btn-gold">
-        Discord
-      </a>
-
-    </div>
-
   </div>
-
-</div>
+</section>
