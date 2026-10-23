@@ -57,7 +57,7 @@
           {{ 'HERO.INFO_TEXT' | translate }}
         </p>
 
-        <a href="#books" class="btn-gold">
+        <a *ngIf="showBooksSection" href="#books" class="btn-gold">
           {{ 'HERO.BUTTON' | translate }}
         </a>
     </div>

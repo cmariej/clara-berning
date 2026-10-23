@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
@@ -17,6 +17,7 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
   styleUrls: ['./navbar.scss']
 })
 export class NavbarComponent {
+  @Input() showBooksSection = true;
   menuOpen = false;
 
   closeMenu(): void {

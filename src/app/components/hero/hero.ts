@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -9,4 +9,6 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './hero.html',
   styleUrls: ['./hero.scss']
 })
-export class HeroComponent {}
+export class HeroComponent {
+  @Input() showBooksSection = true;
+}

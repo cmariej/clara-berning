@@ -1,14 +1,14 @@
-<app-navbar></app-navbar>
+<app-navbar [showBooksSection]="showBooksSection"></app-navbar>
 
 <section id="hero">
-  <app-hero></app-hero>
+  <app-hero [showBooksSection]="showBooksSection"></app-hero>
 </section>
 
 <section id="about">
   <app-about></app-about>
 </section>
 
-<section id="books">
+<section id="books" *ngIf="showBooksSection">
   <app-books></app-books>
 </section>
 
@@ -16,4 +16,4 @@
   <app-contact></app-contact>
 </section>
 
-<app-footer></app-footer>
+<app-footer [showBooksSection]="showBooksSection"></app-footer>

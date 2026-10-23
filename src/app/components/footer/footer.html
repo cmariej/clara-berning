@@ -10,7 +10,7 @@
       <nav class="nav-links">
         <a href="#">{{ 'NAV.HOME' | translate }}</a>
         <a href="#about">{{ 'NAV.ABOUT' | translate }}</a>
-        <a href="#books">{{ 'NAV.BOOKS' | translate }}</a>
+        <a *ngIf="showBooksSection" href="#books">{{ 'NAV.BOOKS' | translate }}</a>
         <a href="#contect">{{ 'NAV.CONTACT' | translate }}</a>
         <a routerLink="/impressum">{{ 'FOOTER.IMPRINT' | translate }}</a>
         <a routerLink="/datenschutz">{{ 'FOOTER.PRIVACY' | translate }}</a>
